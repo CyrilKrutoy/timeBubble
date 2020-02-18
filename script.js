@@ -57,8 +57,49 @@ function bubbleSort(arr) {
     }
     return arr;
 }
-let randomArr10 = ,
-    randomArr100 = ,
-    randomArr1000 = ;
 
 
+function randomArr() {
+    const res = [];
+    for (let i = 1; i <= 1000; i++) {
+        res.push([Math.round(Math.random() * 2000 - 1000)]);
+    }
+    return res;
+}
+let randomArrTen = randomArr(),
+    randomArrHundred = randomArr(),
+    randomArrThousand = randomArr();
+
+randomArrTen.length = 10;
+randomArrHundred.length = 100;
+randomArrThousand.length = 1000;
+
+console.time('bubblesortTen');
+bubbleSort(randomArrTen);
+console.timeEnd('bubblesortTen');
+console.log(`length = ${randomArrTen.length} \n`)
+
+console.time('bubblesortHundred');
+bubbleSort(randomArrHundred);
+console.timeEnd('bubblesortHundred');
+console.log(`length = ${randomArrHundred.length} \n`)
+
+console.time('bubblesortThousand');
+bubbleSort(randomArrThousand);
+console.timeEnd('bubblesortThousand');
+console.log(`length = ${randomArrThousand.length} \n`)
+
+// console.time('sortTen');
+// randomArrTen.sort((prev, next) => prev - next);
+// console.timeEnd('sortTen');
+// console.log(`length = ${randomArrTen.length} \n`)
+
+// console.time('sortHundred');
+// randomArrHundred.sort((prev, next) => prev - next);
+// console.timeEnd('sortHundred');
+// console.log(`length = ${randomArrHundred.length} \n`)
+
+// console.time('sortThousand');
+// randomArrThousand.sort((prev, next) => prev - next);
+// console.timeEnd('sortThousand');
+// console.log(`length = ${randomArrThousand.length} \n`)
