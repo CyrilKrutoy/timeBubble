@@ -11,7 +11,7 @@ function clockFirst() {
         currentHours = "0" + currentHours;
     } else if (currentMinutes < 10) {
         currentMinutes = "0" + currentMinutes;
-    } else if (currentHours < 10) {
+    } else if (currentSeconds < 10) {
         currentSeconds = "0" + currentSeconds;
     }
     document.body.innerText = currentHours + ':' + currentMinutes + ':' + currentSeconds;
