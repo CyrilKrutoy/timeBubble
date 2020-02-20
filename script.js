@@ -61,16 +61,16 @@
 // }
 
 
-// function randomArr() {
+// function randomArr(arr) {
 //     const res = [];
-//     for (let i = 1; i <= 1000; i++) {
+//     for (let i = 1; i <= arr; i++) {
 //         res.push(Math.round(Math.random() * 2000 - 1000));
 //     }
 //     return res;
 // }
-// let randomArrTen = randomArr(),
-//     randomArrHundred = randomArr(),
-//     randomArrThousand = randomArr();
+// let randomArrTen = randomArr(10),
+//     randomArrHundred = randomArr(100),
+//     randomArrThousand = randomArr(1000);
 
 // randomArrTen.length = 10;
 // randomArrHundred.length = 100;
@@ -124,20 +124,16 @@ function bubbleSort(arr) {
 }
 
 
-function randomArr() {
+function randomArr(arr) {
     const res = [];
-    for (let i = 1; i <= 1000; i++) {
+    for (let i = 1; i <= arr; i++) {
         res.push(Math.round(Math.random() * 2000 - 1000));
     }
     return res;
 }
-let randomArrTen = randomArr(),
-    randomArrHundred = randomArr(),
-    randomArrThousand = randomArr();
-
-randomArrTen.length = 10;
-randomArrHundred.length = 100;
-randomArrThousand.length = 1000;
+let randomArrTen = randomArr(10),
+    randomArrHundred = randomArr(100),
+    randomArrThousand = randomArr(1000);
 
 console.time('bubblesortTen');
 bubbleSort(randomArrTen);
